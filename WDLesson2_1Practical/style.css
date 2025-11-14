@@ -9,24 +9,26 @@ selector{
 
 
 /* Challenge 1: Change color of the text for all the headings size 3 to blue */
-h3 {
-  color: blue;
+h3{
+  color:blue;
 }
+
 /* Challenge 2: Change the size for the font for all headings size 1 to 60pt */
-  h1 {
+  h1{
     font-size: 60pt;
-  }    
+  }
+      
 /* Challenge 3: Change the style of the font for all spans to italic */
-span{
+div{
   font-style: italic;
 }
 /* Challenge 4: Change the family of font being used for all paragraphs to "Arial" */
 p{
-  font-style: arial;
+  font-family: Arial;
 }
 /* Challenge 5: Change the family of font being used for all lists to "Comic Sans MS".  What element creates a list? */
-ul{
-  font-family: Comic Sans MS 
+div{
+  font-family: Comic Sans MS;
 }
 /* Chalenge 6: Change the background color of the div to blue, color of the text to white and the weight of the font to bold.*/
       div{

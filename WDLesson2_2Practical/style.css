@@ -7,30 +7,35 @@
 
 /* Challenge 5: Change the family of all elements to Arial */
 *{
-  font-family: Arial;
+  font-family: Arial ;
 }
+
 /* Challenge 6: Change the background color to blue, the color of the text to white for all elements 
 with a class of "info" */
+*.info{
+  background-color: blue;
+  color:white;
 
-
-.info{ 
-    background-color: blue;
-  background-color: white;
 }
+
+
+
 /* Challenge 7: Add a border of 2px solid red for all elements with a class of "highlight" */
-.highlight {
-  border: red solid 2px;
+*.highlight div{
+  font-size: 2px;
+
 }
 /* Challenge 8: Align the text in the center and drop a shadow on the text of 2px 2px yellow  for 
 all elements with a class of "special"
 */
-.special {
+*.special{
+  text-shadow: 2px 2px ;
   text-align: center;
-  box-shadow: 2px 5px yellow;
 }
+
 
 /* Challenge Bonus: Create a CSS rule for a class named "shadow".  
 Apply a shadow to the box around the elements that is 2px 2px  gray. */ 
-div {
-  box-shadow: blue 5px 5px ;
+.shadow{
+  text-shadow: 2px 2px gray;
 }
