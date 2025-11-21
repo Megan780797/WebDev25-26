@@ -32,6 +32,8 @@ Body
       <div id="sample">
           <h1>Sample Code</h1>
       </div>
+      <div 
 
 Footer
       <p>Copyright 1999-2020 by Refsnes Data. All Rights Reserved. W3Schools is Powered by W3.CSS.</p>
+      
