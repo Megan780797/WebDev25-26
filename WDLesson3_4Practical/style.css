@@ -28,7 +28,7 @@ html,body{
  #story{
    padding:20px;
    font-family:Comic Sans MS;
-   display: none;
+   display: block;
    margin-bottom:100px;
  }
  #story span{
