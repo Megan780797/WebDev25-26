@@ -51,3 +51,7 @@ html,body{
   font-style:italic;
   color:blueviolet;
 }
+  #output img{
+    height: 200px;
+    width: 200px
+  }
