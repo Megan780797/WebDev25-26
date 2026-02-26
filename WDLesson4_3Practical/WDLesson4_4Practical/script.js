@@ -4,8 +4,12 @@
        3) Store the correct answer in the variable correct.  This will be used in checkProblem( )
        4) Using string interpolation, display an addition problem like "2 + 2 =" except using the random numbers generated. 
 */
+
 let correct;
 function generateProblem(){
+    let problem= document.getElementById("problem");
+    Math.floor(Math.random()* (20-0+1)+20);
+    
 
 }
 
@@ -18,7 +22,8 @@ function generateProblem(){
            b) otherwise set msg to "Incorrect. The answer is " followed by the correct answer.  Also include incorrect image
        4) Display msg in the output
 */
-function checkProblem(){
+function checkResposne(){
+
 
 }
 

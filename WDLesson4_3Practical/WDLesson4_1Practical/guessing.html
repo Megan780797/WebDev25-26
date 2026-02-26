@@ -11,20 +11,14 @@
       function guess(){
         let g = parseFloat(document.getElementById("guess").value);
         let output = document.getElementById("output");
-        let message = "";
+        let message = ""
 
         // Challenge 5: If the guess is lower than secret, set message to "Guess higher" 
-        if(g < secret){
-          message="Guess higher";
-        }
+
         // Challenge 6: If the guess is higher than secret, set message to "Guess lower" 
-        if(g > secret){
-          message="Guess lower";
-        }
+
         // Challenge 7: If the guess is equal to secret, set message to "You got it!" 
-        if(g == secret){
-          message="You got it!";
-        }
+
         output.innerHTML = `<h3>${message}</h3>`
         //Note:  Remember innerHTML accepts any type of HTML for example an image
         

@@ -16,11 +16,7 @@
 
         let distance = Math.sqrt(Math.pow(x1-x2, 2) + Math.pow(y1-y2, 2))
         // Challenge 4: If the distance is less than 5, set filename to "explosion.gif" otherwise set it to "snoopy-pilot.gif"
-        if(distance > 5){
-          filename="explosion.gif"
-        } else{
-          filename="snoopy-pilot.gif"
-        }
+
         output.innerHTML = `<img src="${filename}">`
         //Note:  Remember innerHTML accepts any type of HTML for example an image
         
