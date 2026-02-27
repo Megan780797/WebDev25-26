@@ -7,13 +7,14 @@
 
 let correct;
 function generateProblem(){
-    let problem= document.getElementById("problem");
-    Math.floor(Math.random()* (20-0+1)+20);
-    
-
+    let problem = document.getElementById("problem");
+    let num1 = Math.floor(Math.random() * 21+0);
+    let num2 = Math.floor(Math.random() * 21 +0);
+    correct = num1 + num2;
+    problem.innerHTML = `${num1} + ${num2} = `;
 }
 
-/* Challenge 3: Complete the function checkProblem by ,
+/* Challenge 3: Complete the function checkResposne by ,
        1) Create a variable for the users response
        2) Create a variable for the <div> with id of output
        3) Create a variable msg for the output
@@ -23,6 +24,21 @@ function generateProblem(){
        4) Display msg in the output
 */
 function checkResposne(){
+    let user=parseInt(document.getElementById("response").value);
+    let op=document.getElememtById("output");
+    let filename="";
+    let msg="";
+    if(user==correct){
+        filename="correct.webp";
+        msg=`Correct! <br><img src="${filename}">`;
+    }else{
+        filename="incorrect.webp";
+        msg=`Incorrect. The correct answer is ${correct}. <br><img src="${filename}">`;
+    }
+    op.innerHTML=msg;
+    }
+
+
 
 
 }
