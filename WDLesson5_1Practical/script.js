@@ -12,10 +12,16 @@ Year 3: $xxxxxx
 ...
 Year N: $xxxxxx
 */
-function roots(){
+function calculateCompoundInterest(){
     let p= parseFloat(document.getElementById("p").value);
     let r= parseFloat(document.getElementById("r").value);
-    let n= parseFloat(document.getElementById("n").value); 
-     let t=parseFloat(document.getElementById("t").value);
+    let n= parseInt(document.getElementById("n").value); 
+    let yrs=parseInt(document.getElementById("t").value);
+    let build="";
+    for(let t=0; t<=yrs; t+=1){
+        let a= p*(1+r/n)**(n*t);
+        build += `Year ${t}: $${a.toFixed(2)}<br>`;
+    }
+    document.getElementById("output").innerHTML=build;
      
 }
