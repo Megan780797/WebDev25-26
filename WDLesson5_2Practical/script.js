@@ -13,22 +13,29 @@ No HTML element needed/
 
 Now that you have the template, use a for loop to produce all five pizza cards.
 */ 
-   let bulid="";
-   for(let i=1; i<=5; i+=1){
-      bulid+=`<div class="card">
-         <h3>Margherita</h3>
-         <img src="title1${i}.png" class="title">
-         <img src="pizza1${i}.jpg" class="pizza">
-      </div>`;
+   
 
-   }
 
 
 // Go to style.css for Challenge 3-6
 
 //init() function is called when the page loads in index.html
 function init(){
-  
+   let output=document.getElementById("output");
+   let bulid="";
+
+   for(let i=1; i<=5;i+=1){
+      let price=Math.floor(Math.random()*(35-15+1)+1);
+      bulid+=`<div class="card">
+               <img src= "images/title${i}.png" class="title">
+               <img src="images/pizza${i}.jpg" class="pizza"> <br>
+               $${price}<input type="text" placeholder="Enter Quantity" id="">
+               <input type="button" value="BUY" onclick="">
+            </div>`;
+      
+   }
+   output.innerHTML=bulid;
 
 }
+
 

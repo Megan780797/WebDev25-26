@@ -33,15 +33,25 @@ input[type="text"]{
   border-radius:10px;
   box-shadow:2px 2px 2px black;
   /* Challenge 4: Set the flex to 0 0 150px and text-align to center */
-
+  flex: 0 0 150px;
+  text-align: center;
 }
 
 /* Challenge 5: Create CSS class rule named pizza to used with the pizza images
             1) Provide an appropriate width and height (say 200px)for the image
             2) Set object-fit to cover;
+
 */
+.pizza{
+  width:200px;
+  height: 200px;
+  object-fit: cover;
+}
 
 /* Challenge 6: Create CSS class rule named title to used with the title images.  
                 Set height to an appropriate size (say 50px)
 
 */
+.title{
+  height: 50px;
+}
