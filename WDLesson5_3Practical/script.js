@@ -11,9 +11,20 @@
 */
 
 function balance(){
-
-
+        let output= document.getElementById("output");
+        let p=parseFloat(document.getElementById("p").value);
+        let r= parseFloat(document.getElementById("r").value);
+        let n=parseInt(document.getElementById("n").value);
+        let time=parseInt(document.getElementById("t").value);
+        let bulid="<table><tr><th>Year</th><th>Balance</th></tr>"
+        for(let i=1; i<=10; i+=1){
+                let a=1000*(1+0.05)**i;
+                bulid+=`<tr><td>${i}</td><td>${a.toFixed(2)}</td></tr>`;
+        }
+        bulid+=`</table>`;
+        output.innerHTML=bulid;
 }
+
 
 /* Challenge Bonus: Allow the user to enter n.  This will require you to modify,
         1) Retrieve the value of n from the user.
@@ -23,4 +34,5 @@ function balance(){
               b. n = 12 then the interest is compounded monthly
               c. n = 3 then the interest is compounded quarterly
               d. n = 2 then the interest is compounded bi-yearly
-*/ 
+*/  
+        
