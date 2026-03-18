@@ -12,17 +12,25 @@
 
 function balance(){
         let output= document.getElementById("output");
-        let p=parseFloat(document.getElementById("p").value);
-        let r= parseFloat(document.getElementById("r").value);
-        let n=parseInt(document.getElementById("n").value);
-        let time=parseInt(document.getElementById("t").value);
-        let bulid="<table><tr><th>Year</th><th>Balance</th></tr>"
-        for(let i=1; i<=10; i+=1){
-                let a=1000*(1+0.05)**i;
-                bulid+=`<tr><td>${i}</td><td>${a.toFixed(2)}</td></tr>`;
-        }
-        bulid+=`</table>`;
-        output.innerHTML=bulid;
+        let p=parseFloat(document.getElementById("P").value);
+        let R= parseFloat(document.getElementById("R").value);
+        let yrs=parseInt(document.getElementById("t").value);
+        let build="";
+        bulid+=`<table>
+                <tr>
+                 <th>Year</th>
+                <th>balance</th>
+                        </tr>`;
+for(let t=0;t<=yrs; t++){
+        let A=P*Math.pow(1+(r/100), t);
+        bulid+=`<tr>
+                <td>${t}</td>
+                <td>$${A.toFixed(2)}</td>
+                </tr>`;
+        
+}
+bulid+="</table>"
+output.innerHTML=bulid;
 }
 
 
@@ -35,4 +43,4 @@ function balance(){
               c. n = 3 then the interest is compounded quarterly
               d. n = 2 then the interest is compounded bi-yearly
 */  
-        
+ 
