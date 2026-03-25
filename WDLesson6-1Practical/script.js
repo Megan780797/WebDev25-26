@@ -37,11 +37,31 @@ function init(){
       <h3>${meat_titles[index]}</h3>
       <img class="food" src="images/${meat_images[index]}">
       <h4>${meat_prices[index]}</h4>
-      </div> 
+      </div> `;
     }
-      
-    output.innerHTML=bulid;
+     output.innerHTML=bulid;
   //Challenge 5:  Build cards for the seafoods. Place the build in the seafood container.
+  for(let index=0;seafood_images.length; i++){
+     bulid+=`<div class="card">
+      <h3>${seafood_titles[index]}</h3>
+    <img class="food" src="images/${seafood_images[index]}">
+      <h4>${seafood_prices[index]}</h4>
+      </div> `;
+     output.innerHTML=bulid;;
+    }
 
+
+    
+
+
+ 
   //Challenge 6:  Build cards for the desserts. Place the build in the dessert container.
+for(let index=0;seafood_images.length; i++){
+     bulid+=`<div class="card">
+      <h3>${dessert_titles[index]}</h3>
+    <img class="food" src="images/${seafood_images[index]}">
+      <h4>${dessert_prices[index]}</h4>
+      </div> `;
+     output.innerHTML=bulid;;
+    }
 }
