@@ -8,15 +8,15 @@ Challenge 1: Add the appropriate images to each array below from the list of ima
 
 let meat_images = ["beeftips.jpg","brisket.jpg","ribeye.jpg", "steak.jpg"];
 let meat_prices = [10.99,15.45,23.45,29.67];
-let meat_titles = [ Beeftips,Brisket,Ribeye,Steak];
+let meat_titles = [ "Beeftips","Brisket","Ribeye","Steak"];
 
 let seafood_images = ["clams.jpg","crabs.jpg","lobster.png","scallops.jpg","shrimp.jpg","tuna.jpg",];
 let seafood_prices = [5.55,10.00,45.00,34.56,23.00,10.00];
-let seafood_titles = [Clams,Crabs,Lobster,Scallops,Shrimp,Tuna];
+let seafood_titles = ["Clams","Crabs","Lobster","Scallops","Shrimp","Tuna"];
 
 let dessert_images = ["flan.jpg","passionberry.jpeg","oreocup.jpg"];
 let dessert_prices = [15.00,27.00,56.00];
-let dessert_titles = [Flan,Passionberry,Oreocup];
+let dessert_titles = ["Flan","Passionberry","Oreocup"];
 
 function init(){
   //Each food has its own output container
@@ -32,36 +32,41 @@ function init(){
   */
 
   //Challenge 4:  Build cards for the meats. Place the build in the meat container. 
-    for(let index=0; meat_images.length; i++){
-      bulid+=`<div class="card">
-      <h3>${meat_titles[index]}</h3>
-      <img class="food" src="images/${meat_images[index]}">
-      <h4>${meat_prices[index]}</h4>
-      </div> `;
+    for(let index=0; meat_images.length; index++){
+      build+=`<div class="card">
+                  <h3>${meat_titles[index]}</h3>
+                  <img class="food" src="images/${meat_images[index]}">
+                  <h4>${meat_prices[index]}</h4>
+              </div> `;
     }
-     output.innerHTML=bulid;
+    m.innerHTML=bulid;
+
   //Challenge 5:  Build cards for the seafoods. Place the build in the seafood container.
-  for(let index=0;seafood_images.length; i++){
-     bulid+=`<div class="card">
+  build = ``;
+  for(let index=0;seafood_images.length; index++){
+    build+=`<div class="card">
       <h3>${seafood_titles[index]}</h3>
     <img class="food" src="images/${seafood_images[index]}">
       <h4>${seafood_prices[index]}</h4>
       </div> `;
-     output.innerHTML=bulid;;
+    
     }
-
+       s.innerHTML=build;
 
     
 
 
  
   //Challenge 6:  Build cards for the desserts. Place the build in the dessert container.
-for(let index=0;seafood_images.length; i++){
+build = ``;
+  for(let index=0;dessert_images.length; i++){
+
      bulid+=`<div class="card">
       <h3>${dessert_titles[index]}</h3>
-    <img class="food" src="images/${seafood_images[index]}">
+    <img class="food" src="images/${dessert_images[index]}">
       <h4>${dessert_prices[index]}</h4>
       </div> `;
-     output.innerHTML=bulid;;
+     
     }
+      d.innerHTML=bulid;;
 }
