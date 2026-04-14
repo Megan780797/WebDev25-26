@@ -30,7 +30,7 @@ function artist(){
  build+=`<div class="card">
     <h3>${artist.name}</h3>
     <img src="${artist.image}">
-    <a>${artist.url}</a>
+    <a href=${artist.url}</a>
   <div>`;
   output.innerHTML=build;
 }
