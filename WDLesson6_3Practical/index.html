@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WD Lesson 6.3 Practical</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+   </head>
+  <body>
+    <div id="banner" class="container center">
+      <h1> Megan Food store  </h1>
+      <!-- Challenge 1: Give your store a new name (replace content of h1 above)-->
+    </div>
+
+    <div class="container subbanner">
+      <div>
+        <p><!-- Challenge 2: Welcome the customer to your store. Tell them why your store is the BEST! Think of it as a commercial -->
+          Welcome to Megan Food store! Megan Food store is the best is because we have amazing  Meats,Seafood and Desserts! Come to New York City to try Megan Food store!
+        </p>
+       </div>
+    </div>
+
+    <!-- Links to display eventHandlers that display Meats, Seafood and Desserts.  
+     Look at script.js for the names of the event handlers. 
+     Meats is provided below as an example. -->
+    <nav class="container">
+      <a onclick="showMeats()"> Meats </a>
+      
+      <!-- Challenge 3: Add 2 more links - one for Seafood and the other for Desserts -->
+      <a onclick="showSeafood()">Seafood</a>
+      <a onclick="showDesserts()">Desserts</a>
+    </nav>
+
+    <div class="container food_titles center">
+      <!-- title -->
+      <h1 id="title">Item Title</h1>
+    </div>
+
+    <!-- output -->
+    <div class="container" id="output"></div>
+
+    <div id="footer" class="container center">
+      <h3>Lesson 6.3 Practical</h3>
+    </div>  
+  </body>
+</html>
