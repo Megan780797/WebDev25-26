@@ -70,11 +70,11 @@ function showSeafood(){
      Make the title a heading(h3), place the image in the middle, and make the price a paragraph.   
      2) Change the title to "Seafood".
   */
-for(let i=0; i<meats.length;i++){
+for(let i=0; i<seafood.length;i++){
   build+=`<div class="card" id="title">
-  <h3>${seafood_titles}</h3>
-  <img src=${"seafood_images"}>
-  <p>${seafood_prices }</p>
+  <h3>${seafood[i].title}</h3>
+  <img src="images/${seafood[i].image}">
+  <p>${seafood[i].price }</p>
   </div>`;
 }
 
@@ -92,11 +92,11 @@ function showDesserts(){
      Make the title a heading(h3), place the image in the middle, and make the price a paragraph.
      2) Change the title to "Desserts".
   */
-for(let i=0; i<meats.length;i++){
+for(let i=0; i<dessert.length;i++){
   build+=`<div class="card" id="title">
-  <h3>${dessert_titles}</h3>
-  <img src=${"dessert_images"}>
-  <p>${dessert_prices }</p>
+  <h3>${ dessert[i].title}</h3>
+  <img src="images/${dessert[i].image}">
+  <p>${dessert[i].price }</p>
   </div>`;
 }
 
