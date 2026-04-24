@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WD_6.6 Practical</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+   </head>
+
+  <body onload="init()">
+    <div id="banner" class="container center">
+      <div style="text-align:center">
+          <h1>NYC Open Data</h1>
+          <h2>Filtering 311 Complaints</h2>
+      </div>
+    </div>
+
+    <div class="container subbanner">
+      <div>
+        <p>This practical challenges students to provide various ways to filter  
+          311 Service Requests (Complaints) retrieved from NYC Open Data.</p>
+        <a class="button" href="https://opendata.cityofnewyork.us/" target="_blank">NYC Open Data</a> 
+        <a class="button" target="_blank" href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9/about_data"
+"> 311 Service Request</a>
+        <a class="button" target="_blank" href="https://jsoneditoronline.org/"> JSON Editor Online</a>
+       </div>
+    </div>
+
+    <div class="container">
+      <div id="leftPanel">
+        <!--Card below is the basic HTML to use for Challenge 1 and 3 -->
+        <div class="card">
+          <h3>SEARCH By Borough</h3>
+          <input type="text" id="borough" placeholder="Enter Borough (all CAPS)">
+          <hr></hr>
+          <a class="button" onclick="filterByBorough()"> Search </a>
+        </div>
+        <!--Challenge 1: Create another UI in order to filter by zip code. [See Challenge 2 in script.js] -->
+          <h3>By Zip</h3>
+          <input type="text" id="zip " placeholder="Enter Zip">
+           <a class="button" onclick="filterByzip()"> Search </a>
+
+        <!--Challenge 3: Create another UI in order to filter by complaint type. [See Challenge 4 in script.js] -->
+
+
+      </div>
+
+      <div class="card" id="rightPanel">
+        <h1>311 Service Requests</h1>
+        <div id="result" class="container"></div>
+        <div id="output" class="container"></div>
+      </div>
+      
+    </div>
+
+    <div id="footer" class="container center">
+      <h3>Lesson 6.6 Practical</h3>
+    </div>  
+  </body>
+</html>
