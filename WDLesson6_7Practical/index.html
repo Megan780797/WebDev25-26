@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WD_6.7 Practical</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+   </head>
+
+  <body onload="init()">
+    <div id="banner" class="container center">
+      <div style="text-align:center">
+          <h1>NYC Open Data</h1>
+          <h2>Filtering 311 Complaints</h2>
+      </div>
+    </div>
+
+    <div class="container subbanner">
+      <div>
+        <p>This practical challenges students to provide various ways to filter  
+          Motor Vechicle Collisions  retrieved from NYC Open Data.</p>
+        <a class="button" href="https://opendata.cityofnewyork.us/" target="_blank">NYC Open Data</a> 
+        <a class="button" target="_blank" href="https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data"
+">  Motor Vechicle Collisions </a>
+        <a class="button" target="_blank" href="https://jsoneditoronline.org/"> JSON Editor Online</a>
+       </div>
+    </div>
+
+    <div class="container">
+      <div id="leftPanel">
+        <!--Card below is the basic HTML to use for Challenge 1 and 3 -->
+  
+        <!--Challenge 1: Create another UI in order to filter by zip code. [See Challenge 2 in script.js] -->
+          <div class="card">
+         <h3> Each collision</h3>
+          <input type="text" id="collision" placeholder="Enter the type of collision">
+           <hr></hr>
+          <a class="button" onclick="filterByCollision()"> Search </a>
+        </div>
+        <!--Challenge 3: Create another UI in order to filter by complaint type. [See Challenge 4 in script.js] -->
+         
+      <div class="card" id="rightPanel">
+        <h1>311 Service Requests</h1>
+        <div id="result" class="container"></div>
+        <div id="output" class="container"></div>
+      </div>
+      
+    </div>
+
+    <div id="footer" class="container center">
+      <h3>Lesson 6.7 Practical</h3>
+    </div>  
+  </body>
+</html>
