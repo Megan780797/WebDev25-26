@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>WD_6.7 Practical</title>
+    <title>WD_6.6 Prac Soln</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="script.js"></script>
    </head>
@@ -19,10 +19,10 @@
     <div class="container subbanner">
       <div>
         <p>This practical challenges students to provide various ways to filter  
-          Motor Vechicle Collisions  retrieved from NYC Open Data.</p>
+          311 Service Requests (Complaints) retrieved from NYC Open Data.</p>
         <a class="button" href="https://opendata.cityofnewyork.us/" target="_blank">NYC Open Data</a> 
-        <a class="button" target="_blank" href="https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data"
-">  Motor Vechicle Collisions </a>
+        <a class="button" target="_blank" href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9/about_data"
+"> 311 Service Request</a>
         <a class="button" target="_blank" href="https://jsoneditoronline.org/"> JSON Editor Online</a>
        </div>
     </div>
@@ -30,16 +30,30 @@
     <div class="container">
       <div id="leftPanel">
         <!--Card below is the basic HTML to use for Challenge 1 and 3 -->
-  
-        <!--Challenge 1: Create another UI in order to filter by zip code. [See Challenge 2 in script.js] -->
-          <div class="card">
-         <h3> Each collision</h3>
-          <input type="text" id="collision" placeholder="Enter the type of collision">
-           <hr></hr>
-          <a class="button" onclick="filterByCollision()"> Search </a>
+        <div class="card">
+          <h3>SEARCH By Crash</h3>
+          <input type="text" id="crash" placeholder="Enter the type of Crash ">
+          <hr></hr>
+          <a class="button" onclick="filterByCrash()"> Search </a>
         </div>
+        <!--Challenge 1: Create another UI in order to filter by zip code. [See Challenge 2 in script.js] -->
+        <div class="card">
+          <h3>SEARCH By Zip Code</h3>
+          <input type="text" id="zip" placeholder="Enter zip code">
+          <hr></hr>
+          <a class="button" onclick="filterByZip()"> Search </a>
+        </div>
+
         <!--Challenge 3: Create another UI in order to filter by complaint type. [See Challenge 4 in script.js] -->
-         
+        <div class="card">
+          <h3>SEARCH by how many pepole were injured</h3>
+          <input type="text" id="injured" placeholder="Enter how many pepople were injured">
+          <hr></hr>
+          <a class="button" onclick="filterByPepopleInjured()"> Search </a>
+        </div>
+
+      </div>
+
       <div class="card" id="rightPanel">
         <h1>311 Service Requests</h1>
         <div id="result" class="container"></div>
@@ -49,7 +63,7 @@
     </div>
 
     <div id="footer" class="container center">
-      <h3>Lesson 6.7 Practical</h3>
+      <h3>Lesson 6.6 Practical</h3>
     </div>  
   </body>
 </html>

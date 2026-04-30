@@ -1,7 +1,7 @@
 let data, info;
 
 async function init(){   
-  let link = "311.json"; //let link = "https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=1000";
+  let link = "mvc.json"; //let link = "https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data";
   info = await fetch(link);
   data = await info.json();
   
@@ -26,7 +26,7 @@ async function init(){
 }
 
 // Code below demonstrates the basic process to filter information by borough. Use this as a guide for Challenges 2 and 4 below.
-function filterByCollision(){
+function filterByCrash(){
   let output = document.getElementById("output");
   let borough = document.getElementById("borough").value;
   let result = document.getElementById("result");
@@ -36,7 +36,7 @@ function filterByCollision(){
 
   for(let i = 0; i < data.length; i+=1){
     let crash = data[i];
-    if(  crash == collision){
+    if(  crash == crash){
       build+=`<div class="card">
         <h4>${crash.crash_date}</h4>
         <hr>
@@ -55,10 +55,10 @@ function filterByCollision(){
 
 // Challenge 2: Create an event handler (function) to filter the 311 Service Request by zip code.
 
-function filterByzip(){
+function filterByPepopleInjured(){
    for(let i = 0; i < data.length; i+=1){
-    let complaint = data[i];
-    if(complaint.zip == zip){
+    let crash = data[i];
+    if(complaint == zip){
       build += `<div class=" card">
                   <h3>${complaint.complaint_type}</h3>
                   <hr>
