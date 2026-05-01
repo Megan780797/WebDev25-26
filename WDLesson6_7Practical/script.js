@@ -11,13 +11,13 @@ async function init(){
   for(let i = 0; i < data.length; i+=1){
     let crash = data[i];
       build+=`<div class="card">
-        <h1>${crash.collision_id}</h1>
+        <h3> The collision id-${crash.collision_id}</h3>
         <hr>
-        <p>${crash.crash_time}</p>
-        <p>${crash.number_of_persons_injured}</h2>
-        <p>${crash.on_street_name}</p>
+        <p> The crash time-${crash.crash_time}</p>
+        <p> The number of pepole injured-${crash.number_of_persons_injured}</h2>
+        <p>  The street name${crash.on_street_name}</p>
         <p>${crash.contributing_factor_vehicle_1}</p>
-        <p>${crash.on_street_name}</p>
+        <p> The street name-${crash.on_street_name}</p>
         </div>`   
   }
   output.innerHTML = build;
@@ -33,22 +33,21 @@ function filterByStreetName(){
 
   for(let i = 0; i < data.length; i+=1){
     let crash = data[i];
-    if(  crash == crash){
-      build+=`<div class="card">
-        <h4>${crash.crash_date}</h4>
+       build+=`<div class="card">
+        <h3> The collision id-${crash.collision_id}</h3>
         <hr>
-        <p>${crash.crash_time}</p>
-        <h2>${crash.number_of_persons_injured}</h2>
-        <p>${crash.on_street_name}</p>
+        <p> The crash time-${crash.crash_time}</p>
+        <p> The number of pepole injured-${crash.number_of_persons_injured}</h2>
+        <p>  The street name${crash.on_street_name}</p>
         <p>${crash.contributing_factor_vehicle_1}</p>
-        <h3>${crash.collision_id}</h3>
+        <p> The street name-${crash.on_street_name}</p>
         </div>`
     
     }
   }
   result.innerHTML = `${ct} Results found.`
   output.innerHTML = build;
-}
+
 
 
 // Challenge 4: Create an event handler (function) to filter the 311 Service Request by complaint type. 
@@ -61,21 +60,17 @@ function filterByPepopleInjured(){
 
    for(let i = 0; i < data.length; i+=1){
     let complaint = data[i];
-    if(complaint.zip == zip){
-      build += `<div class=" card">
-                  <h3>${complaint.complaint_type}</h3>
-                  <hr>
-                  <p>${complaint.zip}</p>
-                  <p>${complaint.incident_ComplaintType}</p>
-                  <p>${complaint.descriptor}</p>
-                  <hr>
-                  <p>${complaint.created_date}</p>
-                  <hr>
-                  <p>${complaint.agency}</p>
-                </div>`;
+     build+=`<div class="card">
+        <h3> The collision id-${crash.collision_id}</h3>
+        <hr>
+        <p> The crash time-${crash.crash_time}</p>
+        <p> The number of pepole injured-${crash.number_of_persons_injured}</h2>
+        <p>  The street name${crash.on_street_name}</p>
+        <p>${crash.contributing_factor_vehicle_1}</p>
+        <p> The street name-${crash.on_street_name}</p>
+        </div>`
       ct += 1;
     }
   }
   result.innerHTML = `${ct} Results found.`
   output.innerHTML = build;
-}

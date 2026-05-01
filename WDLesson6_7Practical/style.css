@@ -12,7 +12,7 @@ html,body{
 }
 
 nav{
-  background-color:cornflowerblue;
+  background-color:blue;
 }
 nav a{
   color:black;
@@ -44,8 +44,9 @@ nav a:hover{
   flex:1;
   margin:10px;
   padding:10px;
-  border:1px solid gray;
+  border:1px solid blueviolet;
   text-align:center;
+  background-color: bisque;
 }
 
 .highlight{
@@ -68,6 +69,7 @@ nav a:hover{
 }
 #output{
   flex-wrap:wrap;
+  background-color: aqua;
 }
 .fit{
   width:150px;
