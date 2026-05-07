@@ -14,19 +14,26 @@ function init(){
 
   //Challenge 4: Set height and weight to appropriate numbers. Pass the variables as arguments to the bmi() function defined in Challenge 3.
   // Store the result in a variable called b. Display the value of b.
-  let height;
-  let weight;
-  let b;
+  let height=70;
+  let weight = 160;
+  let b = bmi(height, weight);
+   display(`Acroding to the ${height} & ${weight} the bmi is${b}`);
 
   //Challenge 6:  Pass the value b from challenge 4 to the bmiCategory() function and store in a variable bc.  Display the BMI category returned by bmiCategory().
-
+let bc = bmiCategory(b);
+display(`${bc}`);
 
   
   //Challenge 8: Call lottery() with some number and display the results.
-
+let myTicket = lottery(6);
+display(`${myTicket}`);
 
 
   //Challengen 10: Create an array survey which contains several "Y" and "N" items. Pass this survey array to the function results( ) and display the value returned.
+  let survey = ["Y", "Y", "N", "Y", "N", "Y", "N", "N", "Y"];
+let totalYes = results(`${survey}`);
+display(`${totalYes}`);
+
 
   
 }
