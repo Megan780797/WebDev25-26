@@ -68,6 +68,7 @@ nav a:hover{
 }
 #output{
   flex-wrap:wrap;
+  display: flex;
 }
 .fit{
   width:150px;
