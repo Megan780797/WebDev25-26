@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>7.2 Prac Collisions(map)</title>
+<!-- Challenge 1: Import the CSS file and JS file required from LeafletJS.com. -->
+    <!-- LeafletJS CSS file -->
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+    <!-- LeafletJS JS file (must place after Leaflet's CSS file) -->
+       <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="helper.js"></script>
+    <script src="script.js"></script>
+   </head>
+   
+  <body onload="init()">
+    <div id="banner" class="container center">
+      <h1> Motor Vehicle Collisions - with Maps </h1>
+    </div>
+    <div class="container subbanner">
+      <div>
+        <p>This practical challenges students to display accident information retrieved from the <a href="https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95" target="_blank">Motor Vehicle Collision</a> dataset at NYC Open Data. As part of the functionality of the web site, students will provide a UI to filter for specific accidents, as well as the ability to display the location of the accident on a map.</p>
+       </div>
+    </div>
+
+    <div>
+        <!-- Challenge 2: Create a UI to allow the user to specify a borough to use as a filter for the accidents in the dataset. -->
+       <input type="text" id="borough" placeholder="Enter Borough">
+      <input type="button" onclick="filterByBoro()" value="Display">
+    </div>
+
+    <div id="output" class="container">
+      <div id="leftPanel" class="container"></div>
+      <!-- div for LeafletJS map -->
+      <div id="map"></div>
+    </div>
+    
+    <div id="footer" class="container center">
+      <h3>Lesson 7.2b Prac - Collisions(Map)</h3>
+    </div>  
+  </body>
+</html>
