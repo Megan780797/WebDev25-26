@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WD 7.3b CW_Chart-Aggrn</title>
+    <!-- Import libraries and link files  -->
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="c3.css" rel="stylesheet" type="text/css" />
+    <script src="c3.js"></script>
+    <script src="d3.js"></script>    
+    <script src="script.js"></script>
+   </head>
+   
+  <body onload="init()">
+    <div id="banner" class="container center">
+      <div style="text-align:center">
+          <h1> Charts: 311 complaints by Agency </h1>
+      </div>
+    </div>
+    <div class="container subbanner">
+      <div>
+        <p>This classwork challenges students to aggregate information in order to display the results in chart.  In order to aggregate the information we must traverse the data and keep tallies on each piece of information.  Charts created use information associated 311 Complaint Services data from <a href="https://opendata.cityofnewyork.us/">NYC Open Data</a></p>
+        <h4> Chart analysis of 311 complaints by Agency</h4>
+       </div>
+    </div>
+    <div class="container">
+      <p><span class="highlight">Scenario:</span>Chart analyzes the number of complaints by agency.</p>
+      <select id="chartType" style="width:150px;">
+        <option>Select Chart Type</option>
+        <option value="bar">Bar</option>
+        <option value="pie">Pie</option>
+        <option value="donut">Donut</option>
+      </select>
+      <a class="button" onclick="ByAgency()"> Display </a>
+    </div>
+    <div class="container subbanner"><br></div>
+
+    <div id="output"></div> <!-- div for chart -->
+    
+    <div id="footer" class="container center">
+      <h3>WD Lesson 7.3b Classwork</h3>
+    </div>  
+  </body>
+</html>
