@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <!-- This program will help you produce CHARTS of different types to represent information from the data available. We will use two JavaScript libraries, D3 and C3.
+
+  D3 is "Data-Driven Documents". It is a JS library for producing dynamic, interactive data visualizations in web browsers using HTML and CSS. 
+
+  C3 is a D3-based reusable library to create charts. D3 helps to display them on a web page. C3 needs D3 in order to work.
+
+  Files needed are c3.css, c3.js and d3.js (compatible versions)
+    -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>7.3 Prac Charts(collisions)</title>
+    <!-- Import libraries and link files  -->
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="c3.css" rel="stylesheet" type="text/css" />
+    <script src="c3.js"></script>
+    <script src="d3.js"></script>
+    <script src="helper.js"></script>  
+    <script src="script.js"></script>
+   </head>
+  
+  <body onload="init()">
+    <div id="banner" class="container center">
+      <h1> Charts: Motor Vehicle Collisions </h1>
+    </div>
+    <div class="container subbanner">
+      <div>
+        <p>This practical challenges students to aggregate information of accidents stored in the <a href="https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95" target="_blank"> Motor Vehicle Collisions </a> dataset from NYC Open Data. Students take the information and use the <a href="https://c3js.org/">c3.js</a> JavaScript library to visualize the results as a chart.</p>
+       </div>
+    </div>
+    <div class="container">
+      <div id="panel">
+        
+        <div class="card">
+          <h3>Select Chart Type</h3>
+          <select id="chartType" style="width:100px;">
+            <option value="bar">Bar</option>
+            <option value="pie">Pie</option>
+          </select>
+        </div>
+        
+        <div class="card">
+          <h3>Accidents by Borough</h3>
+          <p><span class="highlight">Scenario:</span> Aggregate the number of accidents by borough and create a chart to analyze the results.</p>
+          <a class="button" onclick="accidentsByBorough()"> Show Chart </a>
+        </div>
+        
+        <div class="card">
+          <h3>Accidents by Vehicle Type</h3>
+          <p><span class="highlight">Scenario:</span> Aggregate the number of accidents by vehicle type and create a chart to analyze the results.</p>
+          <a class="button" onclick="accidentsByVehicle()"> Show Chart </a>
+        </div>
+      </div>
+      
+      <div class="card">
+       <div id="chart"></div> <!-- div for chart -->
+      </div>
+    </div>
+
+    <div id="footer" class="container center">
+      <h3>Lesson 7.3 Prac Charts(Collisions)</h3>
+    </div>  
+  </body>
+</html>
