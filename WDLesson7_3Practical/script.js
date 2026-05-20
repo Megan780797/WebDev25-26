@@ -53,22 +53,22 @@ function accidentsByVehicle(){
 
   //Tally the count of vehicles by type using decisions
  for(let i = 0; i < data.length; i++){
-    let accident = data[i];
-    if(accident.vehicle == "Taxi"){
+    let vehicle = data[i];
+    if(vehicle.vehicle_type_code1 == "Taxi"){
       t++;
-    }else if(accident.vehicle == "Sedan"){
+    }else if(vehicle.vehicle_type_code1  == "Sedan"){
       s++;
-    }else if(accident.vehicle == "Bus"){
+    }else if(vehicle.vehicle_type_code1  == "Bus"){
       bu++;
-    }else if(accident.vehicle == "Bike"){
+    }else if(vehicle.vehicle_type_code1  == "Bike"){
       bi++;
-    }else if(accident.vehicle == "Station Wagon"){
+    }else if(vehicle.vehicle_type_code1 == "Station Wagon"){
       sw++;
     }
   }
 
   //Create data for chart (as array of arrays) with 1st position of array being label
-   let chartData = [
+   let chartData2 = [
     ["Taxi",t],
     ["Sedan",s],
     ["Bus", bu],
@@ -80,6 +80,6 @@ function accidentsByVehicle(){
   let chartType = get("chartType").value; 
   
   //Generate and display chart
- displayChart(chartData,"chart",chartType);
+ displayChart(chartData2,"chart",chartType);
 
 }
